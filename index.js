@@ -13,7 +13,7 @@ standard_input.on('data', function (data) {
     }else
     {
         const percentage = +data;
-        const decimal = percentage*255/100;
+        const decimal = Math.round(percentage*255/100);
         const hex_val = decimal.toString(16);
 
         // Print user input in console.
